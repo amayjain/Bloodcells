@@ -1,10 +1,10 @@
-# Butterflies
+# Bloodcells
 
 Project Description:
 
-This project involves creating an image classification model for categorizing different species of butterflies by testing out different libraries and methods.
+This project involves creating an image classification model for categorizing different types of bloodcells by testing out different libraries and methods.
 
-Alara Balasaygun (Applied Math) - Having never worked with either image classification or neural networks, I am interested in the new scope and skills working on this project will provide in both areas. Gaining more experience with deep learning and putting into practice the libraries of tensorflow and pytorch is also important to me as I hope to further gain deep learning knowledge. In my Math 151a class that I’m currently taking, my TA has discussed his career path as a math graduate where he works heavily with graphics. While image classification isn’t quite that, I do find the relationship between math and imaging quite interesting and hope to further explore it here. As a nat geo lover, butterfly species classification is a fun task to focus on while putting the above into practice.
+Alara Balasaygun (Applied Math) - Having never worked with either image classification or neural networks, I am interested in the new scope and skills working on this project will provide in both areas. Gaining more experience with deep learning and putting into practice the libraries of tensorflow and pytorch is also important to me as I hope to further gain deep learning knowledge. In my Math 151a class that I’m currently taking, my TA has discussed his career path as a math graduate where he works heavily with graphics. While image classification isn’t quite that, I do find the relationship between math and imaging quite interesting and hope to further explore it here. As a vampire and biology lover, bloodcell type classification is a fun task to focus on while putting the above into practice.
 
 Miguel (Cognitive Science) - In 16A I really enjoyed working with machine learning, as well as our comprehensive project at the end of the quarter as I felt that it deepened my understanding of the subject. I hope to continue to develop my understanding through image classification and other machine learning techniques. I know that image classification is an important topic currently, and I hope that the skills I learn through these projects will be helpful in my future endeavors. 
 
@@ -12,12 +12,12 @@ Amay Jain (Applied Math) - I am interested in this project because I have only w
 
 Resources:
 
-We will first try our models in Jupyter, and if the computing power is not enough then we will switch to Google Colab. Since we are working with images we will mainly be using the GPU resources provided, and ideally compress the images in the data processing stage. For final purposes, we will convert everything to .py scripts using VS Code. We will be using this butterfly dataset taken from kaggle, which holds 2786 unique images and is 43.48 kB large. The dataset is well maintained, being updated annually and having its last update 10 months ago. 
+We will first try our models in Jupyter, and if the computing power is not enough then we will switch to Google Colab. Since we are working with images we will mainly be using the GPU resources provided, and ideally compress the images in the data processing stage. For final purposes, we will convert everything to .py scripts using VS Code. We will be using this bloodcell dataset taken from kaggle, which holds 17092 unique images and is 281.23 mB large. 
 
 
 Previous Work: 
 
-The butterfly datasets’ page on Kaggle has several user-created projects employing image classification. They vary in complexity, with 57 total projects uploaded. The projects feature a variety of machine learning and neural network techniques, with some employing Pytorch, Transfer Learning, and MobileNetV2. Since we will be working with Pytorch, these past projects will be relevant as we attempt to design our attempt at image classification. These projects are pretty comprehensive in scope, utilizing visualization techniques, confusion matrix, and multiple machine learning and neural network techniques so they should provide a useful guideline as we complete our project.
+The bloodcell datasets’ page on Kaggle has several user-created projects employing image classification. They vary in complexity, with 57 total projects uploaded. The projects feature a variety of machine learning and neural network techniques, with some employing Pytorch, Transfer Learning, and MobileNetV2. Since we will be working with Pytorch, these past projects will be relevant as we attempt to design our attempt at image classification. These projects are pretty comprehensive in scope, utilizing visualization techniques, confusion matrix, and multiple machine learning and neural network techniques so they should provide a useful guideline as we complete our project.
 
 Tools and skills:
 
