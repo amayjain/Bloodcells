@@ -12,13 +12,14 @@ from sklearn.preprocessing import LabelEncoder
 from sklearn import metrics
 
 import tensorflow as tf
-# from tensorflow import keras
+from tensorflow import keras
 from keras import layers, callbacks
 
 from scipy.ndimage import sobel
 
 
 
+# ------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 # Functions
@@ -204,20 +205,31 @@ def train_model(model, train_data, train_labels, val_data, val_test, test_data, 
     return history, predictions, test_accuracy, confusion_matrix
 
 
+# Function - reshape 4d arrays into 2d arrays for FNN models
+def image_reshape(X):
+    
+    """
+    Reshapes a 3d/4d array of images into a 2d array
+
+    Args:
+        x (numpy array): 3d/4d array of images
+
+    Returns:
+        Reshaped 2d array of images
+    """
+    
+    # Find number of images (1st dimension of 2d array)
+    num_of_images = X.shape[0]
+
+    # second dimension of 2d array (product of all remaining dimensions)
+    resize = np.prod(X.shape[1:])
+
+    # return 2d array
+    return X.reshape(num_of_images, resize)    
 
 
 
-
-
-
-
-
-
-
-
-
-
-
+# ------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
