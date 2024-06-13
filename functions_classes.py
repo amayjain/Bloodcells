@@ -1,20 +1,25 @@
+# Libraries needed
+
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
 import os
 
-from PIL import Image
 import imagesize
 
 from sklearn.preprocessing import LabelEncoder
 from sklearn import metrics
 
 import tensorflow as tf
-from tensorflow import keras
+# from tensorflow import keras
 from keras import layers, callbacks
 
 from scipy.ndimage import sobel
+
+
+
+
 
 # Functions
 
@@ -73,6 +78,7 @@ def image_df(folder_names):
 
 # Function - Use pixel data to calculate edges
 def edge_detection(input_data):
+
     '''
     Detects edges for images through the use of gradients
     
@@ -98,6 +104,7 @@ def edge_detection(input_data):
 
 # Function - Graph an example of edge detetcted images
 def plot_edges(image, x_sobel, y_sobel, norm):
+
     '''
     Plot images after edge detection
     
@@ -119,7 +126,7 @@ def plot_edges(image, x_sobel, y_sobel, norm):
     
     norm = norm.astype("int32")
     
-    fig, ax = plt.subplots(2, 2, figsize=(100, 100))
+    fig, ax = plt.subplots(2, 2, figsize = (100, 100))
     
     # plt.gray()  
     # show the filtered result in grayscale
@@ -218,6 +225,7 @@ def train_model(model, train_data, train_labels, val_data, val_test, test_data, 
 
 # Class - Sample image data
 class Sampling:
+
     '''
     Samples a bloodcell dataframe either by down-sampling or proportionally selecting the image count by bloodcell type
 
@@ -351,6 +359,7 @@ class Sampling:
 
 # Class - Convert images to pixel arrays            
 class Convert_Images:
+
     '''
     Converts image string paths to numpy arrays
 
@@ -405,6 +414,7 @@ class Convert_Images:
         return tensor
 
     def image_arrays_and_labels(self, resize = 32, edge = False):
+
         '''
         Convert dataframe of image paths into numpy arrays and bloodcell type labels
 
