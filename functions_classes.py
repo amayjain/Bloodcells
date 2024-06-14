@@ -64,8 +64,11 @@ def image_df(folder_names):
     all_data['type_category'] = all_data['type'] # keep a copy of bloodcell types by name
     all_data['type'] = le.fit_transform(all_data['type'])
 
+    # Store full image file path to access images later on
+    all_data['images'] = 'bloodcells_dataset/' + all_data['type_category'] + '/' + all_data['images']
+
     # Store dimensions of image incase we find different dimensions 
-    dimensions = pd.Series([imagesize.get('bloodcells_dataset/All_Images/' + x) for x in all_data['images']])
+    dimensions = pd.Series([imagesize.get(x) for x in all_data['images']])
     widths, heights = map(list, zip(*dimensions))
     all_data['width'] = widths
     all_data['height'] = heights
@@ -366,7 +369,7 @@ class Sampling:
         test = remaining_data[~remaining_data['images'].isin(validation['images'])]
 
         # Return train, val, test dataframes
-        return train, validation, test
+        return train.reset_index(drop = True), validation.reset_index(drop = True), test.reset_index(drop = True)
 
 
 # Class - Convert images to pixel arrays            
@@ -390,7 +393,7 @@ class Convert_Images:
         else:
             self.data = data # bloodcell dataframe that contains images to convert
 
-        self.file_names = (self.data)['images'].apply(lambda x: 'bloodcells_dataset/All_Images/' + x) # extract image string paths from data
+        self.file_names = (self.data)['images'] # extract image string paths from data
 
         self.labels = (self.data)['type'] # extract bloodcell type labels from data
 
