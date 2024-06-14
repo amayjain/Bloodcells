@@ -1,5 +1,7 @@
 # Bloodcells
 
+Dataset - https://www.kaggle.com/datasets/unclesamulus/blood-cells-image-dataset
+
 Project Description:
 
 This project involves creating an image classification model for categorizing different types of bloodcells by testing out different libraries and methods.
